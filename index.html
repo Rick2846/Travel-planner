@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>旅行計画プランナー</title>
+  <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+  <!-- ヘッダー（タイトルのみ） -->
+  <header>
+    <h1>旅行計画プランナー</h1>
+  </header>
+
+  <!-- メインコンテンツ -->
+  <main>
+    <section class="content">
+      <form id="travel-form">
+        <label for="destination">行き先:</label>
+        <input type="text" id="destination" name="destination" required>
+
+        <label for="people">人数:</label>
+        <input type="number" id="people" name="people" min="1" required>
+
+        <label for="start-date">出発日:</label>
+        <input type="date" id="start-date" name="start-date" required>
+
+        <label for="end-date">帰宅日:</label>
+        <input type="date" id="end-date" name="end-date" required>
+
+        <label for="activities">やりたいこと:</label>
+        <textarea id="activities" name="activities" rows="4" required></textarea>
+
+        <button type="submit" id="submit-btn">旅行計画を作成</button>
+      </form>
+
+      <!-- プログレスバー（初期状態は非表示） -->
+      <div id="progress-container" class="hidden">
+         <div id="progress-bar"></div>
+      </div>
+
+      <!-- 旅行計画の結果表示 -->
+      <div id="travel-plan">
+        <!-- ここに旅行計画が表示されます -->
+      </div>
+    </section>
+  </main>
+
+  <!-- フッター -->
+  <footer>
+    <p>&copy; 2025 旅行計画プランナー. All Rights Reserved.</p>
+    <p>Contact: Riku Yamafuji | Gmail: <a href="mailto:riku.yamafuji0904@gmail.com">riku.yamafuji0904@gmail.com</a></p>
+  </footer>
+
+  <script src="./index.js"></script>
+</body>
+</html>
